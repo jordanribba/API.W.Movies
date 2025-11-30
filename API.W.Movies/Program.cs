@@ -1,3 +1,4 @@
+using API.W.Movies.Services;
 using API.W.Movies.DAL;
 using API.W.Movies.MoviesMapper;
 using API.W.Movies.Repository;
@@ -17,6 +18,13 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // Dependency Injection For Repositories
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+//Registro
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+
+
+//Registro
+builder.Services.AddScoped<IMovieService, MovieService>();
 
 
 builder.Services.AddControllers();
